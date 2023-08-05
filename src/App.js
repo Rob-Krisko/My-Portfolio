@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components';
 import "slick-carousel/slick/slick.css"; 
@@ -33,6 +33,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
     </Container>
