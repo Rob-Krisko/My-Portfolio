@@ -26,6 +26,7 @@ const ContentContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+  overflow: hidden;
 `;
 
 const Title = styled.h1`
