@@ -7,6 +7,7 @@ const Card = styled.div`
   border-radius: 5px;
   overflow: hidden;
   margin: 10px;
+  cursor: pointer;  // Added to show it's clickable
 `;
 
 const CardImage = styled.img`
@@ -20,17 +21,15 @@ const CardContent = styled.div`
 `;
 
 function ProjectCard({ project }) {
-  const { title, description, imageUrl, projectUrl } = project;
+  const { title, description, imageUrl } = project;
 
   return (
     <Card>
-      <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-        <CardImage src={imageUrl} alt={title} />
-        <CardContent>
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </CardContent>
-      </a>
+      <CardImage src={imageUrl} alt={title} />
+      <CardContent>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </CardContent>
     </Card>
   );
 }
